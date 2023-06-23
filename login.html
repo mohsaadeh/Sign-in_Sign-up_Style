@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-form {
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .login-form .column {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    padding: 0;
+    }
+
+
+    .login_column_img{
+        width: 55%;
+        height: 100vh;
+        background-image: url('Screenshot\ 2023-03-22\ 093739.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* .login-form .column img {
+      max-width: 100%;
+      height: auto;
+    } */
+
+    .input-group_title{
+        text-align: center;
+        margin: 50px auto;
+        text-transform: uppercase;
+    }
+
+    .login-form .column .input-group {
+      width: 75%;
+    margin: 20px auto 0 auto;
+    }
+
+    .login-form .column .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .login-form .column .input-group input[type="text"],
+    .login-form .column .input-group input[type="password"] {
+      width: 80%;
+      margin: 0 auto;
+      padding: 15px 25px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .login-form .column .input-group input[type="text"]:focus ,
+    .login-form .column .input-group input[type="password"]:focus  {
+        border: 2px solid #49bbbd;
+        outline: none;
+    }
+
+    .login-form .column  .checkbox {
+      width: 100%;
+        margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 14px;
+    }
+
+    .login-form .column  .icons {
+      width: 100%;
+        margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 14px;
+    }
+
+    .login-form .column  .icons div{
+
+        width: 15%;
+        height: 50px;
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .login-form .column .input-group .checkbox label {
+      margin-left: 5px;
+    }
+
+    .login-form .column .input-group .btn-login {
+      display: block;
+      width: 90%;
+      padding: 15px;
+      background-color: #49bbbd;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .login-form .column .input-group .btn-login:hover {
+      background-color: #b9d2ec;
+    }
+
+    .login-form .column .input-group .forgot-password {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .login-form .column .input-group .signup-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .login-form a  {
+      color: #49bbbd;
+      text-decoration: none;
+    }
+
+    .text_with_line  h2 {
+    font-size: 16px;
+     width: 80%;
+   text-align: center; 
+   border-bottom: 1px solid #49bbbd; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+.text_with_line h2 span { 
+    background:#f2f2f2; 
+    padding:0 10px; 
+}
+
+    /* Responsive Styles */
+
+    @media only screen and (max-width: 768px) {
+      .login-form {
+        flex-direction: column;
+      }
+
+      .login-form .column {
+        padding: 20px;
+        width: 100%;
+      }
+
+      .login-form .column img {
+        margin-bottom: 20px;
+      }
+
+      .login_column_img{
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .login-form .column {
+        padding: 10px;
+      }
+
+      .login-form .column .input-group {
+        margin-bottom: 10px;
+      }
+
+      .login-form .column  .checkbox {
+        flex-direction: column;
+
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="login_container ">
+    <form class="login-form" action="#" method="POST">
+   
+      <div class="column">
+        <div class="input-group_title" >
+            <h1>Welcome Back !</h1>
+        </div>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+        </div>
+        <div class=" checkbox ">
+            <div>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <div>
+          <a href="#">Forgot password ?</a>
+        </div>
+
+        </div>
+        <div class="input-group">
+          <button class="btn-login" type="submit">Login</button>
+        </div>
+       
+        <div class="checkbox signup-link">
+          <p style="font-size: 18px;">Don't have an account ? <a href="#">Sign up</a></p>
+        </div>
+        <div class="checkbox signup-link text_with_line">
+                    <h2><span>or continue with</span></h2>
+        </div>
+
+
+        <div class="icons  ">
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        </div>
+
+      </div>
+
+      <div class="login_column_img">
+        <!-- <img src="Screenshot 2023-03-22 093739.png" alt="Logo"> -->
+      </div>
+    </form>
+
+
+  </div>
+</body>
+</html>
